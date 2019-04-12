@@ -1,5 +1,5 @@
 <div class="container above-below-space">
-  <h1>Register</h1>
+  <h1>Login</h1>
 
   <form (ngSubmit) = "login()" #f="ngForm">
     <div *ngIf="errorFlag"
@@ -28,7 +28,7 @@
     </div>
 
 
-    <button class="btn btn-primary btn-block" type="submit" routerLink="/user/{{uid}}">Login</button>
+    <button class="btn btn-primary btn-block" type="submit" routerLink="/user/">Login</button>
     <a href="/facebook/login" class="btn btn-primary btn-block">
       <span class="fa fa-facebook"></span> Facebook
     </a>
