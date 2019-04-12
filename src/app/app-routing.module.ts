@@ -5,12 +5,10 @@ import {AuthGuard} from './services/auth-guard.service';
 import { LoginComponent } from './views/user/login/login.component';
 import {HomeComponent} from './views/homepage/home/home.component';
 
-
-
-
 ​const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
+  {path: 'login', component: LoginComponent}
 
 ];
 

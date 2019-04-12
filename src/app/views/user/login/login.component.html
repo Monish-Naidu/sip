@@ -36,3 +36,83 @@
 
 
   <!--</form></div>-->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 nja-split-view-left hidden-xs text-center vertical-center">
+      <div class="container-fluid">
+        <h1><span class="fas fa-coffee"></span></h1>
+        <h3>Sip</h3>
+      </div>
+    </div>
+
+    <div class="col-sm-8 nja-split-view-right pages">
+      <div class="row vertical-center">
+        <div class="col-sm-10 col-xs-12">
+          <div class="container-fluid">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <form class="form-horizontal">
+                  <h2>Login</h2>
+
+                  <div ng-show="model.errorMessage" class="alert alert-danger">
+                    {{errorMsg}}
+                  </div>
+
+                  <div class="form-group">
+                    <label for="username"
+                           class="col-md-2 control-label">Username</label>
+
+                    <div class="col-md-10">
+                      <input name="username"
+                             placeholder="username"
+                             ng-model="model.user.username"
+                             type="text"
+                             class="form-control"
+                             id="username"
+                             required/>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password"
+                           class="col-md-2 control-label">Password</label>
+
+                    <div class="col-md-10">
+                      <input name="password"
+                             placeholder="password"
+                             ng-model="model.user.password"
+                             type="password"
+                             class="form-control"
+                             id="password"
+                             required/>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-2">
+
+                      <input class="btn btn-default btn-primary"
+                             ng-click="model.login(model.user)"
+                             role="button"
+                             type="submit"
+                             value="login"/>
+
+                      <a class="btn btn-default btn-success"
+                         href="#!/register"
+                         role="button">Register</a>
+
+                      <a href="/facebook/login" class="btn btn-primary btn-block">
+                      <span class="fa fa-facebook"></span> Facebook
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
