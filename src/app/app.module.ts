@@ -8,6 +8,7 @@ import { RegisterComponent } from './views/user/register/register.component';
 import { ProfileComponent } from './views/user/profile/profile.component';
 import { LocationComponent } from './views/website/location/location.component';
 import { ControlComponent } from './views/admin/control/control.component';
+import {HomeComponent} from './views/homepage/home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ControlComponent } from './views/admin/control/control.component';
     RegisterComponent,
     ProfileComponent,
     LocationComponent,
-    ControlComponent
+    ControlComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
