@@ -1,0 +1,15 @@
+.class {
+  attribute: value;
+}
+
+.website-background {
+  background-color: #F0F0F0;
+}
+
+.margin-auto{
+  margin: auto;
+}
+
+.box-shadow{
+  box-shadow: 10px 10px 20px 10px #D3D3D3;
+}
