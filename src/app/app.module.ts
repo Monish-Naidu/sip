@@ -9,6 +9,7 @@ import { ProfileComponent } from './views/user/profile/profile.component';
 import { LocationComponent } from './views/website/location/location.component';
 import { ControlComponent } from './views/admin/control/control.component';
 import {HomeComponent} from './views/homepage/home/home.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {HomeComponent} from './views/homepage/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
