@@ -6,7 +6,6 @@ import { LoginComponent } from './views/user/login/login.component';
 import {HomeComponent} from './views/homepage/home/home.component';
 import {ProfileComponent} from './views/user/profile/profile.component';
 import {RegisterComponent} from './views/user/register/register.component';
-import {LocationComponent} from './views/website/location/location.component';
 import {StorefrontComponent} from './views/store/storefront/storefront.component';
 
 ​const routes: Routes = [

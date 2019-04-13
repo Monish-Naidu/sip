@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './views/user/login/login.component';
 import { RegisterComponent } from './views/user/register/register.component';
 import { ProfileComponent } from './views/user/profile/profile.component';
-import { LocationComponent } from './views/website/location/location.component';
 import { ControlComponent } from './views/admin/control/control.component';
 import {HomeComponent} from './views/homepage/home/home.component';
 import {StorefrontComponent} from './views/store/storefront/storefront.component';
@@ -21,7 +20,6 @@ import {FormsModule} from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    LocationComponent,
     ControlComponent,
     HomeComponent,
     StorefrontComponent,
