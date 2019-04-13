@@ -10,6 +10,8 @@ import { LocationComponent } from './views/website/location/location.component';
 import { ControlComponent } from './views/admin/control/control.component';
 import {HomeComponent} from './views/homepage/home/home.component';
 import {FormsModule} from '@angular/forms';
+import { StorefrontComponent } from './views/store/storefront/storefront.component';
+import { CartComponent } from './views/store/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {FormsModule} from '@angular/forms';
     ProfileComponent,
     LocationComponent,
     ControlComponent,
-    HomeComponent
+    HomeComponent,
+    StorefrontComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
