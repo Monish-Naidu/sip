@@ -8,7 +8,7 @@ import {UserService} from '../../../services/user.service.client';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['../../../../../node_modules/bootstrap/dist/css/bootstrap.css' , './login.component.css']
 })
 export class LoginComponent implements OnInit {
   @ViewChild('f') loginForm: NgForm;
