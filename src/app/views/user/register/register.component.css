@@ -13,3 +13,12 @@
 .box-shadow{
   box-shadow: 10px 10px 20px 10px #D3D3D3;
 }
+
+.register-box-height{
+  padding-top: 10px;
+  /*padding-bottom: 10px;*/
+}
+
+.register-cancel-btn{
+  padding-bottom: 10px;
+}

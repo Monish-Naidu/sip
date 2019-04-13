@@ -13,9 +13,10 @@
 
     <div class="col-sm box-shadow">
       <div class="text-center col-sm-12 align-content-center">
-        <div class="col-sm-12 align-content-center">
+        <div class="col-sm-12 align-content-center register-box-height">
+          <h1>Register for Sip Here!</h1>
           <form (ngSubmit)="register()" #f="ngForm">
-            <div class="form-group">
+            <div class="form-group register-box-height">
               <input type="text"
                      name="username"
                      placeholder="username"
@@ -29,7 +30,7 @@
               *ngIf="!username.valid && username.touched">
         Please enter a valid username
       </span>
-            <div class="form-group">
+            <div class="form-group register-box-height">
               <input type="password"
                      name="password"
                      placeholder="password"
@@ -44,7 +45,7 @@
         Please enter a valid password
       </span>
 
-            <div class="form-group">
+            <div class="form-group register-box-height">
               <input type="password"
                      name="verify_password"
                      placeholder="verify password"
@@ -64,8 +65,8 @@
                 Register
               </button>
             </div>
-            <div>
-              <a class="btn btn-danger  btn-block"
+            <div class="register-cancel-btn">
+              <a class="btn btn-danger  btn-block register-cancel-btn"
                  routerLink="/login">Cancel</a>
             </div>
           </form>
