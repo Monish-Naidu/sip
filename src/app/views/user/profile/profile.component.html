@@ -1,171 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
 
-<!--&lt;!&ndash;&#45;&#45;&#45;&#45;Top navbar&#45;&#45;&#45;&#45;&ndash;&gt;-->
-
-
-
-<!--<nav class="navbar navbar-fixed-top cl-blue-navbar ">-->
-  <!--<div class="container-fluid">-->
-    <!--<a class=" navbar-brand font-weight-bold text-white float-left" routerLink="">-->
-      <!--Profile-->
-    <!--</a>-->
-    <!--<a (click)="update()" class="navbar-link float-left text-white">-->
-      <!--<i class="fas fa-check fontawsome_icon"></i>-->
-    <!--</a>-->
-  <!--</div>-->
-<!--</nav>-->
-
-<!--&lt;!&ndash;&#45;&#45;&#45;&#45;Title&#45;&#45;&#45;&#45;&ndash;&gt;-->
-
-<!--<div class="container above-below-space">-->
-  <!--<header>-->
-  <!--</header>-->
-  <!--<form>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="username">Username</label>-->
-      <!--<input [(ngModel)]="user.username" name="username" type="text" class="form-control" id="username" placeholder="Username">-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="first-name">First Name</label>-->
-      <!--<input [(ngModel)]="user.firstName" name="first" type="text" class="form-control" id="first-name" placeholder="Alice">-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="last-name">Last Name</label>-->
-      <!--<input [(ngModel)]="user.lastName" name="last" type="text" class="form-control" id="last-name" placeholder="Wonderland">-->
-    <!--</div>-->
-
-  <!--</form>-->
-  <!--<a class="btn btn-primary btn-block"-->
-     <!--routerLink="/user/{{uid}}/website">Websites</a>-->
-  <!--<a class="btn btn-danger  btn-block"-->
-     <!--routerLink="/login">Logout</a>-->
-  <!--<h1></h1>-->
-
-  <!--&lt;!&ndash;&#45;&#45;&#45;&#45;Bottom navbar&#45;&#45;&#45;&#45;&ndash;&gt;-->
-<!--</div>-->
-<!--<nav class="navbar fixed-bottom float-right col-12">-->
-  <!--<div class="container-fluid col-12">-->
-    <!--<div class="row navbar-text float-right col-12">-->
-      <!--<a routerLink="/user/{{uid}}" class="float-right">-->
-        <!--<i class="fas fa-user fontawsome_icon float-right text-white col-12"></i>-->
-      <!--</a>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</nav>-->
-
-
-<!--&lt;!&ndash;&#45;&#45;&#45;&#45;Top navbar&#45;&#45;&#45;&#45;&ndash;&gt;-->
+    <div class="col-lg-4 text-center margin-auto">
+      <div class ="container-fluid align-content-center">
+        <h1>Sip</h1>
+        <h3><span class="fas fa-coffee"></span></h3>
+      </div>
+    </div>
 
 
 
-<!--<nav class="navbar navbar-fixed-top cl-blue-navbar ">-->
-  <!--<div class="container-fluid">-->
-    <!--<a class=" navbar-brand font-weight-bold text-white float-left" routerLink="">-->
-      <!--Profile-->
-    <!--</a>-->
-    <!--<a (click)="update()" class="navbar-link float-left text-white">-->
-      <!--<i class="fas fa-check fontawsome_icon"></i>-->
-    <!--</a>-->
-  <!--</div>-->
-<!--</nav>-->
 
-<!--&lt;!&ndash;&#45;&#45;&#45;&#45;Title&#45;&#45;&#45;&#45;&ndash;&gt;-->
+    <div class="col-sm box-shadow">
+      <div class="text-center col-sm-12 align-content-center">
+        <div class="col-sm-12 align-content-center">
+          <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="alice@wonderland.com">
+            </div>
+            <div class="form-group">
+              <label for="following">Following</label>
+              <input type="text" class="form-control" id="following" placeholder="Input Users to Follow" required>
+            </div>
 
-<!--<div class="container above-below-space">-->
-  <!--<header>-->
-  <!--</header>-->
-  <!--<form>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="username">Username</label>-->
-      <!--<input [(ngModel)]="user.username" name="username" type="text" class="form-control" id="username" placeholder="Username">-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="first-name">First Name</label>-->
-      <!--<input [(ngModel)]="user.firstName" name="first" type="text" class="form-control" id="first-name" placeholder="Alice">-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="last-name">Last Name</label>-->
-      <!--<input [(ngModel)]="user.lastName" name="last" type="text" class="form-control" id="last-name" placeholder="Wonderland">-->
-    <!--</div>-->
-
-  <!--</form>-->
-  <!--<a class="btn btn-primary btn-block"-->
-     <!--routerLink="/user/{{uid}}/website">Websites</a>-->
-  <!--<a class="btn btn-danger  btn-block"-->
-     <!--routerLink="/login">Logout</a>-->
-  <!--<h1></h1>-->
-
-  <!--&lt;!&ndash;&#45;&#45;&#45;&#45;Bottom navbar&#45;&#45;&#45;&#45;&ndash;&gt;-->
-<!--</div>-->
-<!--<nav class="navbar fixed-bottom float-right col-12">-->
-  <!--<div class="container-fluid col-12">-->
-    <!--<div class="row navbar-text float-right col-12">-->
-      <!--<a routerLink="/user/{{uid}}" class="float-right">-->
-        <!--<i class="fas fa-user fontawsome_icon float-right text-white col-12"></i>-->
-      <!--</a>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</nav>-->
-
-
-<!--&lt;!&ndash;&#45;&#45;&#45;&#45;Top navbar&#45;&#45;&#45;&#45;&ndash;&gt;-->
-
-
-
-<!--<nav class="navbar navbar-fixed-top cl-blue-navbar ">-->
-  <!--<div class="container-fluid">-->
-    <!--<a class=" navbar-brand font-weight-bold text-white float-left" routerLink="">-->
-      <!--Profile-->
-    <!--</a>-->
-    <!--<a (click)="update()" class="navbar-link float-left text-white">-->
-      <!--<i class="fas fa-check fontawsome_icon"></i>-->
-    <!--</a>-->
-  <!--</div>-->
-<!--</nav>-->
-
-<!--&lt;!&ndash;&#45;&#45;&#45;&#45;Title&#45;&#45;&#45;&#45;&ndash;&gt;-->
-
-<!--<div class="container above-below-space">-->
-  <!--<header>-->
-  <!--</header>-->
-  <!--<form>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="username">Username</label>-->
-      <!--<input [(ngModel)]="user.username" name="username" type="text" class="form-control" id="username" placeholder="Username">-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="first-name">First Name</label>-->
-      <!--<input [(ngModel)]="user.firstName" name="first" type="text" class="form-control" id="first-name" placeholder="Alice">-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-      <!--<label for="last-name">Last Name</label>-->
-      <!--<input [(ngModel)]="user.lastName" name="last" type="text" class="form-control" id="last-name" placeholder="Wonderland">-->
-    <!--</div>-->
-
-  <!--</form>-->
-  <!--<a class="btn btn-primary btn-block"-->
-     <!--routerLink="/user/{{uid}}/website">Websites</a>-->
-  <!--<a class="btn btn-danger  btn-block"-->
-     <!--routerLink="/login">Logout</a>-->
-  <!--<h1></h1>-->
-
-  <!--&lt;!&ndash;&#45;&#45;&#45;&#45;Bottom navbar&#45;&#45;&#45;&#45;&ndash;&gt;-->
-<!--</div>-->
-<!--<nav class="navbar fixed-bottom float-right col-12">-->
-  <!--<div class="container-fluid col-12">-->
-    <!--<div class="row navbar-text float-right col-12">-->
-      <!--<a routerLink="/user/{{uid}}" class="float-right">-->
-        <!--<i class="fas fa-user fontawsome_icon float-right text-white col-12"></i>-->
-      <!--</a>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</nav>-->
-
+          </form>
+          <a class="btn btn-block"
+             (click)="follow()" >Update Follows</a>
+          <a class="btn btn-danger  btn-block"
+             (click)="logout()" >Logout</a>
+          <h1></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
