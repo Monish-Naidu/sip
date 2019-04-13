@@ -9,10 +9,8 @@ import { ProfileComponent } from './views/user/profile/profile.component';
 import { ControlComponent } from './views/admin/control/control.component';
 import {HomeComponent} from './views/homepage/home/home.component';
 import {StorefrontComponent} from './views/store/storefront/storefront.component';
-import { CartComponent } from './views/store/cart/cart.component';
-
-
 import {FormsModule} from '@angular/forms';
+import { CheckoutComponent } from './views/store/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +21,7 @@ import {FormsModule} from '@angular/forms';
     ControlComponent,
     HomeComponent,
     StorefrontComponent,
-    CartComponent
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

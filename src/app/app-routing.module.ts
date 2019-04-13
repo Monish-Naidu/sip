@@ -7,6 +7,7 @@ import {HomeComponent} from './views/homepage/home/home.component';
 import {ProfileComponent} from './views/user/profile/profile.component';
 import {RegisterComponent} from './views/user/register/register.component';
 import {StorefrontComponent} from './views/store/storefront/storefront.component';
+import {CheckoutComponent} from './views/store/checkout/checkout.component';
 
 ​const routes: Routes = [
   // {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -16,7 +17,8 @@ import {StorefrontComponent} from './views/store/storefront/storefront.component
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'shop', component: StorefrontComponent}
+  {path: 'shop', component: StorefrontComponent},
+  {path: 'checkout', component: CheckoutComponent}
 
 ];
 
