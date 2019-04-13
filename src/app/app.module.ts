@@ -13,7 +13,6 @@ import {StorefrontComponent} from './views/store/storefront/storefront.component
 
 
 import {FormsModule} from '@angular/forms';
-import { StorefrontComponent } from './views/store/storefront/storefront.component';
 import { CartComponent } from './views/store/cart/cart.component';
 
 @NgModule({
