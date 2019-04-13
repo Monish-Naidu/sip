@@ -6,6 +6,7 @@ import { LoginComponent } from './views/user/login/login.component';
 import {HomeComponent} from './views/homepage/home/home.component';
 import {ProfileComponent} from './views/user/profile/profile.component';
 import {RegisterComponent} from './views/user/register/register.component';
+import {LocationComponent} from './views/website/location/location.component';
 
 ​const routes: Routes = [
   // {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -14,7 +15,8 @@ import {RegisterComponent} from './views/user/register/register.component';
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'shop', component: LocationComponent}
 
 ];
 
