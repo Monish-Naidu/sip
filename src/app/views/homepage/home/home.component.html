@@ -8,7 +8,6 @@
     <button type="button" class="btn btn-warning" routerLink="/register">Register</button>
   </form>
 
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,7 +21,8 @@
          ...
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="/shop">Shop</a>
+          <!--forces you to login or register in order to shop-->
+          <a class="dropdown-item" routerLink="/login">Shop</a>
           <a class="dropdown-item" routerLink="https://www.linkedin.com/in/bslam/">About Brian</a>
           <a class="dropdown-item" routerLink="https://www.linkedin.com/in/monishnaidu/">About Monish</a>
         </div>
@@ -32,27 +32,45 @@
 </nav>
 </div>
 
-<div class="col-md box-shadow">
-  <div class="text-center  align-content-center">
-    <form class="form-inline ">
-      <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
-      <i class="fas fa-search" aria-hidden="true"></i>
-    </form>
-  </div>
 
-  <!-- Example split dark button -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-dark">What You Sippin'</button>
-    <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Coffee</a>
-      <a class="dropdown-item" href="#">Bubble Tea</a>
-      <a class="dropdown-item" href="#">Alcohol</a>
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4 text-center margin-auto">
+      <div class ="container-fluid align-content-center">
+        <h1>What Makes Us Great</h1>
+        <p> We truly care about the user experience, our coffee is slow roasted so nice!</p>
+      </div>
     </div>
+    <!--Put the right side of the grid system-->
   </div>
 </div>
+
+
+
+
+
+<!--<div class="col-md box-shadow">-->
+  <!--<div class="text-center  align-content-center">-->
+    <!--<form class="form-inline ">-->
+      <!--<input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">-->
+      <!--<i class="fas fa-search" aria-hidden="true"></i>-->
+    <!--</form>-->
+  <!--</div>-->
+
+  <!--&lt;!&ndash; Example split dark button &ndash;&gt;-->
+  <!--<div class="btn-group">-->
+    <!--<button type="button" class="btn btn-dark">What You Sippin'</button>-->
+    <!--<button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+      <!--<span class="sr-only">Toggle Dropdown</span>-->
+    <!--</button>-->
+    <!--<div class="dropdown-menu">-->
+      <!--<a class="dropdown-item" href="#">Coffee</a>-->
+      <!--<a class="dropdown-item" href="#">Bubble Tea</a>-->
+      <!--<a class="dropdown-item" href="#">Alcohol</a>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 
 
 

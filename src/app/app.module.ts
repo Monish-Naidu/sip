@@ -14,6 +14,7 @@ import { CartComponent } from './views/store/cart/cart.component';
 
 
 import {FormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
