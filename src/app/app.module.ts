@@ -11,6 +11,9 @@ import {HomeComponent} from './views/homepage/home/home.component';
 import {StorefrontComponent} from './views/store/storefront/storefront.component';
 import {FormsModule} from '@angular/forms';
 import { CheckoutComponent } from './views/store/checkout/checkout.component';
+import {HttpClientModule} from '@angular/common/http';
+import {UserService} from './services/user.service.client';
+import {SharedService} from './services/shared.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,10 @@ import { CheckoutComponent } from './views/store/checkout/checkout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService, SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

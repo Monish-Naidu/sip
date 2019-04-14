@@ -7,10 +7,7 @@ import {map} from 'rxjs/operators';
 import {SharedService} from './shared.service';
 
 
-
-
 @Injectable()
-
 export class UserService {
   constructor(private http: HttpClient, private sharedService: SharedService, private router: Router) {}
 
@@ -90,8 +87,6 @@ export class UserService {
     const url = this.baseUrl + '/api/user/' + userId;
     return this.http.put(url, user);
   }
-
-
 
 
 }
