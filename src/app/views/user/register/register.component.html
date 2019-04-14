@@ -85,11 +85,11 @@
                      placeholder="verify password"
                      class="form-control"
                      [(ngModel)]="ngVerify" required
-                     #verify_password="ngModel"/>
+                     #verifyPassword="ngModel"/>
             </div>
             <span
               class="help-block"
-              *ngIf="(ngPassword !== ngVerify) && verify_password.touched">
+              *ngIf="(ngPassword !== ngVerify) && verifyPassword.touched">
         Verify Password does not match Password
       </span>
             <div class="form-group">

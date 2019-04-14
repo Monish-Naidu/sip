@@ -1,11 +1,10 @@
 import { User } from '../models/user.model.client';
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-
-
-// import { Observable } from 'rxjs/Observable ';
 import {environment} from '../../environments/environment';
 import {Router} from '@angular/router';
+import {map} from 'rxjs/operators';
+import {SharedService} from './shared.service';
 
 
 
@@ -13,8 +12,7 @@ import {Router} from '@angular/router';
 @Injectable()
 
 export class UserService {
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient, private sharedService: SharedService, private router: Router) {}
 
 
 
@@ -24,8 +22,8 @@ export class UserService {
   login(username: string, password: string) {
 
     const body = {
-      username: username,
-      password: password
+      username,
+      password
     };
     return this.http.post(this.baseUrl + '/api/login', body, {withCredentials: true});
   }
@@ -35,9 +33,11 @@ export class UserService {
   }
 
   register(username: string, password: string) {
+
+
     const user = {
-      username : username,
-      password : password
+     username,
+    password
     };
     return this.http.post(this.baseUrl + '/api/register', user, {withCredentials: true});
   }
