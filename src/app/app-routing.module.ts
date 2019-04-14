@@ -15,7 +15,7 @@ import {CheckoutComponent} from './views/store/checkout/checkout.component';
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'profile', component: ProfileComponent},
+  {path: 'user/:userId', component: ProfileComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'shop', component: StorefrontComponent},
   {path: 'checkout', component: CheckoutComponent}
