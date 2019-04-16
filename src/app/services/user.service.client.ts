@@ -26,6 +26,7 @@ export class UserService {
   }
 
   logout() {
+    console.log('got to logout in user.service.client');
     return this.http.post(this.baseUrl + '/api/logout', '', {withCredentials: true});
   }
 

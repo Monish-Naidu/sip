@@ -8,6 +8,8 @@ import {ProfileComponent} from './views/user/profile/profile.component';
 import {RegisterComponent} from './views/user/register/register.component';
 import {StorefrontComponent} from './views/store/storefront/storefront.component';
 import {CheckoutComponent} from './views/store/checkout/checkout.component';
+import {ControlComponent} from './views/admin/control/control.component';
+
 
 ​const routes: Routes = [
   // {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,7 +20,8 @@ import {CheckoutComponent} from './views/store/checkout/checkout.component';
   {path: 'user/:userId', component: ProfileComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'shop', component: StorefrontComponent},
-  {path: 'checkout', component: CheckoutComponent}
+  {path: 'checkout', component: CheckoutComponent},
+  {path: 'admin', component: ControlComponent}
 
 ];
 

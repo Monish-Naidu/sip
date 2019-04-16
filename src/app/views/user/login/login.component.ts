@@ -31,6 +31,11 @@ export class LoginComponent implements OnInit {
     this.username = this.loginForm.value.username;
     this.password = this.loginForm.value.password;
 
+    //going to admin page
+    if (this.username === 'admin' && this.password === 'admin') {
+      this.router.navigate(['/admin']);
+    }
+
     // calling client side userservice to send login information
     console.log('data', this.username);
     this.userService.login(this.username, this.password)

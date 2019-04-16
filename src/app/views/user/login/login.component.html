@@ -49,16 +49,32 @@
 
 
 
+
     <div class="col-sm box-shadow">
       <div class="text-center col-sm-12 align-content-center">
         <div class="col-sm-12 align-content-center">
           <h3>Login to Start Sippin</h3>
-          <input type="text"
-                 class="form-control input-group-sm"
-                 placeholder="username"/>
-          <input type="password"
-                 class="form-control input-group-sm"
-                 placeholder="password"/>
+          <form (ngSubmit) = "login()" #f="ngForm">
+
+            <!--username-->
+            <input placeholder="username"
+                   name="username"
+                   type="text"
+                   class="form-control"
+                   ngModel
+                   required
+                   #username="ngModel"/>
+
+            <!--password-->
+            <input placeholder="password"
+                   name="password"
+                   type="password"
+                   class="form-control"
+                   ngModel
+                   required
+                   #password="ngModel"/>
+
+
           <span class="group-btn">
         <div class="form-group">
           <button class="btn btn-primary btn-block " type="submit"><!--[disabled]="!f.valid"-->Login</button>
@@ -75,6 +91,7 @@
 
         <p class="message">Not registered? <a routerLink="/register">Create an account</a></p>
             </span>
+          </form>
         </div>
       </div>
     </div>
