@@ -9,6 +9,7 @@ userModel.findByCredential = findByCredential;
 userModel.updateUser = updateUser;
 userModel.deleteUser = deleteUser;
 userModel.findFacebookUser = findFacebookUser;
+userModel.findAllUsers = findAllUsers;
 
 //helper function
 userModel.populateUsers = populateUsers;
@@ -19,7 +20,9 @@ function findFacebookUser(facebookId) {
   return userModel.findOne({"facebook.id": facebookId});
 }
 
-
+function findAllUsers() {
+  return userModel.find();
+}
 
 function populateUsers(users) {
   return userModel.insertMany(users);

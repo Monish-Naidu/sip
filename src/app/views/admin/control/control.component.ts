@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {User} from '../../../models/user.model.client';
 import {ActivatedRoute} from '@angular/router';
+import {AdminService} from '../../../services/admin.service.client';
 
 
 @Component({
@@ -14,9 +15,13 @@ export class ControlComponent implements OnInit {
   users: User[] = [];
 
 
-  constructor(private activateRoute: ActivatedRoute) { }
+  constructor(private activateRoute: ActivatedRoute, private adminService: AdminService) { }
 
   ngOnInit() {
+    this.adminService.findAllUsers().subscribe((data: any) => {
+      this.users = data;
+      console.log(this.users);
+    });
 
   }
 

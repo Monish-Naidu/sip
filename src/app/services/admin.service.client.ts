@@ -17,8 +17,8 @@ export class AdminService {
   base_url = environment.baseUrl;
 
 
-  findAllUsers(pageId: string) {
-    const url = this.base_url + '/api/user/users';
+  findAllUsers() {
+    const url = this.base_url + '/api/users';
     return this.http.get(url);
   }
 

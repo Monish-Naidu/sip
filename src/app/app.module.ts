@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './services/user.service.client';
 import {SharedService} from './services/shared.service';
 import {AuthGuard} from './services/auth-guard.service';
+import {AdminService} from './services/admin.service.client';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import {AuthGuard} from './services/auth-guard.service';
       apiKey: 'AIzaSyChxSO7vTaM5GUq_OdDIHVa6nTn6MXnmU4'
     })
   ],
-  providers: [UserService, SharedService, AuthGuard],
+  providers: [UserService, SharedService, AuthGuard, AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
