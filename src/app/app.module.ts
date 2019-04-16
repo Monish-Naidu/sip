@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AgmCoreModule } from '@agm/core';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './views/user/login/login.component';
@@ -14,6 +16,7 @@ import { CheckoutComponent } from './views/store/checkout/checkout.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './services/user.service.client';
 import {SharedService} from './services/shared.service';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import {SharedService} from './services/shared.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyChxSO7vTaM5GUq_OdDIHVa6nTn6MXnmU4'
+    })
   ],
   providers: [UserService, SharedService],
   bootstrap: [AppComponent]
