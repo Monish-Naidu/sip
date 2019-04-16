@@ -3,6 +3,7 @@ import {User} from '../../../models/user.model.client';
 import {Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
 import {UserService} from '../../../services/user.service.client';
+import {SharedService} from '../../../services/shared.service';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class RegisterComponent implements OnInit {
   pwErrorMsg: string;
   error: string;
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router, private sharedService: SharedService) { }
 
   register() {
     this.user.username = this.registerForm.value.username;
@@ -34,7 +35,10 @@ export class RegisterComponent implements OnInit {
 
     this.userService.register(this.user.username, this.user.password).subscribe((newUser: any) => {
         alert('Successful registration');
-        this.router.navigate(['/user', newUser._id]);
+        this.sharedService.user = newUser;
+        this.router.navigate(['/user']);
+        console.log('checking new user created at registration');
+        console.log(newUser);
       },
       (error: any) => {
         this.error = error._body;

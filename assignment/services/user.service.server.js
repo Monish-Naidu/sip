@@ -20,9 +20,9 @@ module.exports = function(app) {
   app.get ('/facebook/login', passport.authenticate('facebook', { scope : 'email' }));
 
 
-  //TODO: change this value, bad practice but to test localhost:
-   const appId = 274246986794207;
-   const appSecret = '3ba526057a117b5c76b72eb6162b1824';
+  //bad practice but to test localhost:
+  const appId = 274246986794207;
+  const appSecret = '3ba526057a117b5c76b72eb6162b1824';
 
 
   // facebook config for heroku
@@ -75,9 +75,8 @@ module.exports = function(app) {
   }
 
   function logout(req, res) {
-    console.log('in user.service.server');
     req.logout();
-    res.status(200);
+    res.send(200);
   }
 
   function register (req, res) {

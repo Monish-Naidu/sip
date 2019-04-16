@@ -8,7 +8,7 @@ export class AuthGuard implements CanActivate {
   }
 
   canActivate() {
-    // return this.userService.loggedIn();
-    return null;
+    return this.userService.loggedIn();
+    // return null;
   }
 }
