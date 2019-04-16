@@ -16,6 +16,7 @@ import { CheckoutComponent } from './views/store/checkout/checkout.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './services/user.service.client';
 import {SharedService} from './services/shared.service';
+import {AuthGuard} from './services/auth-guard.service';
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import {SharedService} from './services/shared.service';
       apiKey: 'AIzaSyChxSO7vTaM5GUq_OdDIHVa6nTn6MXnmU4'
     })
   ],
-  providers: [UserService, SharedService],
+  providers: [UserService, SharedService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

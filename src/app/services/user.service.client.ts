@@ -19,8 +19,8 @@ export class UserService {
   login(username: string, password: string) {
 
     const body = {
-      username,
-      password
+      username: username,
+      password: password
     };
     return this.http.post(this.baseUrl + '/api/login', body, {withCredentials: true});
   }

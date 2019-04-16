@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
 import {User} from '../../../models/user.model.client';
 import {UserService} from '../../../services/user.service.client';
+import {SharedService} from '../../../services/shared.service';
 
 @Component({
   selector: 'app-profile',
@@ -15,11 +16,14 @@ export class ProfileComponent implements OnInit {
   user = new User(undefined, undefined, undefined, undefined, undefined, undefined);
   userId: string;
 
-  constructor(private router: Router, private userService: UserService, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private userService: UserService, private activatedRoute: ActivatedRoute,
+              private sharedService: SharedService) { }
 
   logout() {
     this.userService.logout().subscribe((data: any) => {
+      console.log('inside logout');
       this.router.navigate(['/login']);
+      this.sharedService.user = null;
     });
   }
 
