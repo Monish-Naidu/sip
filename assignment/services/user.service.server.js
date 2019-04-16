@@ -77,7 +77,7 @@ module.exports = function(app) {
   function logout(req, res) {
     console.log('in user.service.server');
     req.logout();
-    res.send(200);
+    res.status(200);
   }
 
   function register (req, res) {
