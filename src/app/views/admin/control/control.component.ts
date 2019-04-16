@@ -17,6 +17,7 @@ export class ControlComponent implements OnInit {
   constructor(private activateRoute: ActivatedRoute) { }
 
   ngOnInit() {
+
   }
 
   deleteUser() {

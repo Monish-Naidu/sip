@@ -76,7 +76,7 @@ module.exports = function(app) {
 
   function logout(req, res) {
     req.logout();
-    res.send(200);
+    res.json(200);
   }
 
   function register (req, res) {
@@ -101,8 +101,12 @@ module.exports = function(app) {
   }
 
   function localStrategy(username, password, done) {
-    userModel.findByCredential(username, password).then(
+    console.log("inside local strategy");
+    console.log(username);
+    console.log(password);
+    userModel.findUserByUserName(username).then(
       function(user) {
+        console.log(user);
         if (user && bcrypt.compareSync(password, user.password)) {
           return done(null, user);
         } else {
@@ -110,6 +114,7 @@ module.exports = function(app) {
         }
       },
       function(error) {
+        console.log('error here');
         if (error) { return done(error); }
       }
     );

@@ -27,6 +27,7 @@
     "bootstrap": "^4.3.1",
     "cookie-parser": "^1.4.4",
     "core-js": "^2.5.4",
+    "express": "^4.16.4",
     "express-session": "^1.16.1",
     "google-maps": "^3.3.0",
     "googleapis": "^39.2.0",
