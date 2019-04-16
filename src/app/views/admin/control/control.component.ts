@@ -1,5 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {User} from '../../../models/user.model.client';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -9,8 +11,10 @@ import {NgForm} from '@angular/forms';
 })
 export class ControlComponent implements OnInit {
   @ViewChild('f') controlForm: NgForm;
+  users: User[] = [];
 
-  constructor() { }
+
+  constructor(private activateRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }

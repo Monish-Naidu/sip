@@ -5,7 +5,6 @@ import {environment} from '../../environments/environment';
 import {Router} from '@angular/router';
 import {SharedService} from './shared.service';
 import {map} from 'rxjs/operators';
-import 'rxjs';
 
 
 

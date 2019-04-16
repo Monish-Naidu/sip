@@ -2,10 +2,10 @@
 
 
 <div class="container" >
-  <ul class="list-group cl-list-group-borderless" *ngFor="let profile of users">
+  <ul class="list-group cl-list-group-borderless" *ngFor="let user of users">
     <li class="list-group-item cl-list-item-borderless">
       <a routerLink="/profile/{{pid}}" ><span class="fas float-right fa-trash" ></span></a>
-      <a routerLink="/profile/{{pid}}">{{profile.username}}</a>
+      <a routerLink="/profile/{{pid}}">{{user.username}}</a>
     </li>
   </ul>
 </div>

@@ -21,7 +21,7 @@ import {ControlComponent} from './views/admin/control/control.component';
   {path: 'register', component: RegisterComponent},
   {path: 'shop', component: StorefrontComponent, canActivate: [AuthGuard]},
   {path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]},
-  {path: 'admin', component: ControlComponent, canActivate: [AuthGuard]}
+  {path: 'admin', component: ControlComponent}
 
 ];
 
