@@ -20,7 +20,7 @@ import {ControlComponent} from './views/admin/control/control.component';
   {path: 'user/:userId', component: ProfileComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'shop', component: StorefrontComponent},
-  {path: 'checkout', component: CheckoutComponent},
+  {path: 'user/:userId/checkout', component: CheckoutComponent},
   {path: 'admin', component: ControlComponent}
 
 ];
