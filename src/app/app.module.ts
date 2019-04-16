@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AgmCoreModule } from '@agm/core';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './views/user/login/login.component';
@@ -11,6 +13,7 @@ import {HomeComponent} from './views/homepage/home/home.component';
 import {StorefrontComponent} from './views/store/storefront/storefront.component';
 import {FormsModule} from '@angular/forms';
 import { CheckoutComponent } from './views/store/checkout/checkout.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { CheckoutComponent } from './views/store/checkout/checkout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyChxSO7vTaM5GUq_OdDIHVa6nTn6MXnmU4'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

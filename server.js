@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.use(express.static(path.join(__dirname, 'dist/my-project')));
+app.use(express.static(path.join(__dirname, 'dist/sip')));
 
 // CORS
 app.use(function(req, res, next) {
