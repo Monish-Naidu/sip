@@ -28,7 +28,7 @@ export class AdminService {
   }
 
   deleteUserById(userId: String) {
-    const url = this.base_url + '/api/user/' + userId;
+    const url = this.base_url + '/api/users/' + userId;
     return this.http.delete(url);
   }
 }

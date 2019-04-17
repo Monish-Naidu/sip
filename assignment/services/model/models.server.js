@@ -2,9 +2,9 @@
 var mongoose = require('mongoose');
 
 
-var connectionString = 'mongodb://127.0.0.1:27017/sip';
+//var connectionString = 'mongodb://127.0.0.1:27017/sip';
 //TODO: replace with heroku mongodb
-//var connectionString = 'mongodb://monish:abc123@ds347665.mlab.com:47665/heroku_sbxtf05b';
+var connectionString = 'mongodb://sip:sippin1@ds143326.mlab.com:43326/heroku_lf9sxv4w';
 
 
 

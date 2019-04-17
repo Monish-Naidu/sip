@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {User} from '../../../models/user.model.client';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {AdminService} from '../../../services/admin.service.client';
 
 
@@ -15,7 +15,7 @@ export class ControlComponent implements OnInit {
   users: User[] = [];
 
 
-  constructor(private activateRoute: ActivatedRoute, private adminService: AdminService) { }
+  constructor(private activateRoute: ActivatedRoute, private adminService: AdminService, private router: Router) { }
 
   ngOnInit() {
     this.adminService.findAllUsers().subscribe((data: any) => {
@@ -25,7 +25,12 @@ export class ControlComponent implements OnInit {
 
   }
 
-  deleteUser() {
+  deleteUser(userId) {
+    this.adminService.deleteUserById(userId).subscribe((data: any) => {
+      alert('user deleted');
+      this.router.navigate(['/admin']);
+
+    });
 
   }
 

@@ -12,7 +12,6 @@ module.exports = function(app) {
   app.get("/api/user", findByCredentials);
   app.get("/api/user/:userId", findUserById);
   app.put("/api/user/:userId", updateUser);
-  app.delete("/api/user/:userId", deleteUser);
   app.post('/api/login', passport.authenticate('local'), login);
   app.post("/api/logout", logout);
   app.post("/api/register", register);
@@ -204,14 +203,5 @@ module.exports = function(app) {
       });
   }
 
-  function deleteUser(req, res) {
-    const userId = req.params['userId'];
-    userModel.deleteUser(userId).then(
-      function(user) {
-        res.send(user);
-      }, function (error) {
-        res.status(400).send("use not found");
-      }
-    );
-  }
+
 };

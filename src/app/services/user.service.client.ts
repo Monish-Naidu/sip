@@ -86,9 +86,6 @@ export class UserService {
     return this.http.put(url, user);
   }
 
-  deleteUserById(userId: String) {
-    const url = this.base_url + '/api/user/' + userId;
-    return this.http.delete(url);
-  }
+
 }
 

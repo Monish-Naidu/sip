@@ -18,6 +18,7 @@ import {ControlComponent} from './views/admin/control/control.component';
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'user', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path: 'user/:userId', component: ProfileComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'shop', component: StorefrontComponent, canActivate: [AuthGuard]},
   {path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]},
