@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:3200'
+  // baseUrl: 'http://localhost:3200'
+  baseUrl: 'https://sip-final-project.herokuapp.com'
+  //TODO: change to heroku when pushing project
 
 };
 

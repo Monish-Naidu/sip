@@ -1,11 +1,24 @@
 
+<div class="container-fluid">
+  <div class="row cl-container-padding">
 
+    <div class="col-lg-4 text-center margin-auto bg-light ">
+      <div class ="container-fluid align-content-center">
+        <h1>Admin doing work here</h1>
+        <p>
+          You have the power to destroy users. Be benevolent, and not a Thanos.
+        </p>
+      </div>
+    </div>
+    <!--Put the right side of the grid system-->
+  </div>
+</div>
 
 <div class="container" >
-  <ul class="list-group cl-list-group-borderless" *ngFor="let profile of users">
+  <ul class="list-group cl-list-group-borderless" *ngFor="let user of users">
     <li class="list-group-item cl-list-item-borderless">
-      <a routerLink="/profile/{{pid}}" ><span class="fas float-right fa-trash" ></span></a>
-      <a routerLink="/profile/{{pid}}">{{profile.username}}</a>
+      <a (click)="deleteUser(user._id)" ><span class="fas float-right fa-trash" ></span></a>
+      <a routerLink="/user/{{user._id}}">{{user.username}}</a>
     </li>
   </ul>
 </div>

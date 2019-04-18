@@ -12,7 +12,6 @@ module.exports = function(app) {
   app.get("/api/user", findByCredentials);
   app.get("/api/user/:userId", findUserById);
   app.put("/api/user/:userId", updateUser);
-  app.delete("/api/user/:userId", deleteUser);
   app.post('/api/login', passport.authenticate('local'), login);
   app.post("/api/logout", logout);
   app.post("/api/register", register);
@@ -20,9 +19,9 @@ module.exports = function(app) {
   app.get ('/facebook/login', passport.authenticate('facebook', { scope : 'email' }));
 
 
-  //TODO: change this value, bad practice but to test localhost:
-   const appId = 274246986794207;
-   const appSecret = '3ba526057a117b5c76b72eb6162b1824';
+  //bad practice but to test localhost:
+  const appId = 274246986794207;
+  const appSecret = '3ba526057a117b5c76b72eb6162b1824';
 
 
   // facebook config for heroku
@@ -75,9 +74,8 @@ module.exports = function(app) {
   }
 
   function logout(req, res) {
-    console.log('in user.service.server');
     req.logout();
-    res.status(200);
+    res.json(200);
   }
 
   function register (req, res) {
@@ -102,8 +100,12 @@ module.exports = function(app) {
   }
 
   function localStrategy(username, password, done) {
-    userModel.findByCredential(username, password).then(
+    console.log("inside local strategy");
+    console.log(username);
+    console.log(password);
+    userModel.findUserByUserName(username).then(
       function(user) {
+        console.log(user);
         if (user && bcrypt.compareSync(password, user.password)) {
           return done(null, user);
         } else {
@@ -111,6 +113,7 @@ module.exports = function(app) {
         }
       },
       function(error) {
+        console.log('error here');
         if (error) { return done(error); }
       }
     );
@@ -200,14 +203,5 @@ module.exports = function(app) {
       });
   }
 
-  function deleteUser(req, res) {
-    const userId = req.params['userId'];
-    userModel.deleteUser(userId).then(
-      function(user) {
-        res.send(user);
-      }, function (error) {
-        res.status(400).send("use not found");
-      }
-    );
-  }
+
 };

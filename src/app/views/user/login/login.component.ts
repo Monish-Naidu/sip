@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       .subscribe((user: any) => {
           if (user) {
             this.sharedService.user = user;
-            this.router.navigate(['/user', user._id]);
+            this.router.navigate(['/user']);
           } else {
             this.errorFlag = true;
           }

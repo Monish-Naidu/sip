@@ -17,11 +17,12 @@ import {ControlComponent} from './views/admin/control/control.component';
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'user/:userId', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path: 'user', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path: 'user/:userId', component: ProfileComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'shop', component: StorefrontComponent, canActivate: [AuthGuard]},
-  {path: 'user/:userId/checkout', component: CheckoutComponent, canActivate: [AuthGuard]},
-  {path: 'admin', component: ControlComponent, canActivate: [AuthGuard]}
+  {path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]},
+  {path: 'admin', component: ControlComponent}
 
 ];
 

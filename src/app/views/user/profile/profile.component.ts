@@ -37,17 +37,19 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe(
-      (params: any) => {
-        console.log('profile component: ' + params);
-        this.userId = params.userId;
-        console.log('user id:' + this.userId);
-      });
-
-    this.userService.findUserById(this.userId)
-      .subscribe((user: User) => {
-        this.user = user;
-      });
+    // this.activatedRoute.params.subscribe(
+    //   (params: any) => {
+    //     console.log('profile component: ' + params);
+    //     this.userId = params.userId;
+    //     console.log('user id:' + this.userId);
+    //   });
+    //
+    // this.userService.findUserById(this.userId)
+    //   .subscribe((user: User) => {
+    //     this.user = user;
+    //   });
+    this.user = this.sharedService.user;
+    console.log('inside profile ngOnint');
     this.username = this.user.username;
   }
 
