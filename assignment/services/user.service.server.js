@@ -21,15 +21,19 @@ module.exports = function(app) {
 
   //bad practice but to test localhost:
   const appId = 274246986794207;
-  const appSecret = '3ba526057a117b5c76b72eb6162b1824';
+  const appSecret = "3ba526057a117b5c76b72eb6162b1824";
+
+  //bad practice but this is another set of keys
+  const local = 381499992451385;
+  const localSecret = "6b692e75c14aec0788ba413afb8cf9dc"
 
 
   // facebook config for heroku
   var facebookConfig = {
 
 
-    clientID     : process.env.FB_CLIENT_ID || appId,
-    clientSecret : process.env.FB_CLIENT_SECRET || appSecret,
+    clientID     : process.env.FB_CLIENT_ID || appId || local,
+    clientSecret : process.env.FB_CLIENT_SECRET || appSecret || localSecret,
     callbackURL  : process.env.FB_CALL_BACK_URL || 'http://localhost:3200/auth/facebook/callback/'
   };
 
