@@ -29,12 +29,10 @@ module.exports = function(app) {
 
   // facebook config for heroku
   var facebookConfig = {
-
+    callbackURL  : process.env.FB_CALL_BACK_URL || "http://localhost:3200/auth/facebook/callback/" || "https://sip-final-project.herokuapp.com/auth/facebook/callback/",
     clientID     : process.env.FB_CLIENT_ID || local,
     clientSecret : process.env.FB_CLIENT_SECRET || localSecret,
-    callbackURL  : process.env.FB_CALL_BACK_URL
-      || "http://localhost:3200/auth/facebook/callback/"
-      || "https://sip-final-project.herokuapp.com/auth/facebook/callback/",
+
   };
 
   // passports
