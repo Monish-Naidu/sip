@@ -21,7 +21,7 @@ module.exports = function(app) {
 
   //bad practice but to test localhost:
   const appId = 274246986794207;
-  const appSecret = "3ba526057a117b5c76b72eb6162b1824";
+  const appSecret = '3ba526057a117b5c76b72eb6162b1824';
 
   //bad practice but this is another set of keys
   const local = 381499992451385;
