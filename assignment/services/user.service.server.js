@@ -19,9 +19,9 @@ module.exports = function(app) {
   app.get ('/facebook/login', passport.authenticate('facebook', { scope : 'email' }));
 
 
-  // //bad practice but to test localhost:
-  // const appId = 274246986794207;
-  // const appSecret = '3ba526057a117b5c76b72eb6162b1824';
+  //bad practice but to test localhost:
+  const appId = 274246986794207;
+  const appSecret = '3ba526057a117b5c76b72eb6162b1824';
 
   //bad practice but this is another set of keys
   const local = 381499992451385;
@@ -29,10 +29,10 @@ module.exports = function(app) {
 
   // facebook config for heroku
   var facebookConfig = {
-    callbackURL  : process.env.FB_CALL_BACK_URL || "http://localhost:3200/auth/facebook/callback/" || "https://sip-final-project.herokuapp.com/auth/facebook/callback/",
-    clientID     : process.env.FB_CLIENT_ID || local,
-    clientSecret : process.env.FB_CLIENT_SECRET || localSecret,
-
+    callbackURL  : process.env.FB_CALL_BACK_URL || "https://sip-final-project.herokuapp.com/auth/facebook/callback/",
+    clientID     : process.env.FB_CLIENT_ID || appId,
+    clientSecret : process.env.FB_CLIENT_SECRET || appSecret,
+    // || "http://localhost:3200/auth/facebook/callback/"
   };
 
   // passports
