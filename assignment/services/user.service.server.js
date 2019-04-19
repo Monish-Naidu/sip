@@ -29,7 +29,7 @@ module.exports = function(app) {
 
   // facebook config for heroku
   var facebookConfig = {
-    callbackURL  : process.env.FB_CALL_BACK_URL || "https://sip-final-project.herokuapp.com/auth/facebook/callback/",
+    callbackURL  : process.env.FB_CALL_BACK_URL || "/auth/facebook/callback/",
     clientID     : process.env.FB_CLIENT_ID || appId,
     clientSecret : process.env.FB_CLIENT_SECRET || appSecret,
     // || "http://localhost:3200/auth/facebook/callback/"
