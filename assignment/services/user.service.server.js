@@ -25,7 +25,7 @@ module.exports = function(app) {
 
   //bad practice but this is another set of keys
   const local = 381499992451385;
-  const localSecret = "6b692e75c14aec0788ba413afb8cf9dc"
+  const localSecret = "6b692e75c14aec0788ba413afb8cf9dc";
 
   // facebook config for heroku
   var facebookConfig = {
