@@ -27,13 +27,15 @@ import {ControlComponent} from './views/admin/control/control.component';
 
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes)],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule { }
+//
+//
+//
+//
+// export const AppRouting = RouterModule.forRoot(routes, { useHash: true });
 
-
-
-
-export const AppRouting = RouterModule.forRoot(routes, { useHash: true });
+export const AppRoutingModule = RouterModule.forRoot(routes, { useHash: true });
