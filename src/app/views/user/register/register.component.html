@@ -56,7 +56,7 @@
                      placeholder="username"
                      class="form-control"
                      id="un"
-                     [(ngModel)]="ngUsername" required
+                     ngModel required
                      #username="ngModel"/>
             </div>
             <span
@@ -70,7 +70,7 @@
                      placeholder="password"
                      class="form-control"
                      id="pw"
-                     [(ngModel)]="ngPassword" required
+                     ngModel required
                      #password="ngModel"/>
             </div>
             <span
@@ -81,21 +81,21 @@
 
             <div class="form-group register-box-height">
               <input type="password"
-                     name="verify_password"
+                     name="v_password"
                      placeholder="verify password"
                      class="form-control"
-                     [(ngModel)]="ngVerify" required
+                     ngModel required
                      #verifyPassword="ngModel"/>
             </div>
             <span
               class="help-block"
-              *ngIf="(ngPassword !== ngVerify) && verifyPassword.touched">
+              *ngIf="(password != verifyPassword) && verifyPassword.touched">
         Verify Password does not match Password
       </span>
             <div class="form-group">
               <button class="btn btn-primary btn-block"
                       type="submit"
-                      [disabled]="!f.valid || ngPassword !== ngVerify">
+                      [disabled]="!f.valid || password !== verifyPassword">
                 Register
               </button>
             </div>

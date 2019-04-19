@@ -42,15 +42,15 @@ module.exports = function(app) {
   passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
 
   // auth with Facebook
-  // app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-  //   failureRedirect: '/#/login'
-  // }), function(req, res) {
-  //   res.redirect('/#/user/' + req.user._id);
-  // });
   app.get('/auth/facebook/callback', passport.authenticate('facebook', {
-    successRedirect: '/#/user',
     failureRedirect: '/#/login'
-  }));
+  }), function(req, res) {
+    res.redirect('/#/user/' + req.user._id);
+  });
+  // app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+  //   successRedirect: '/#/user',
+  //   failureRedirect: '/#/login'
+  // }));
   app.get ('/facebook/login', passport.authenticate('facebook', { scope : 'email' }));
 
   function serializeUser(user, done) {
