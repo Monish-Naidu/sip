@@ -1,6 +1,6 @@
-# SipSip Sip Sip
+# Sip Sip Sip
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+https://sip-final-project.herokuapp.com/
 
 ## Development server
 
