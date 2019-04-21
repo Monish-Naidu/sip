@@ -2,26 +2,32 @@
 
 https://sip-final-project.herokuapp.com/
 
-## Development server
+Our Project: A website that allows you to buy local coffee
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How to Use
 
-## Code scaffolding
+If not logged in, you can still view the shop to see what products we sell. However, in order to add anything to cart you must create a profile.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Register & Profile
+Click on Register to create a new user and be navigated to the profile page.
+- Can update User at this point.
+- Can add an item to cart and checkout
 
-## Build
+## Admin
+- Admin has its own unique login. 
+Username: admin
+Password: admin
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- can see a list of users and their profile.
+- clicking on the garbage icon will delete the user from the database. 
 
-## Running unit tests
+## Shop
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- allows you to add coffee beans to cart and takes you to the checkout page
+- if not logged in, it will redirect you to create an account in order to move further
 
-## Running end-to-end tests
+## Checkout
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Only accessible when you're logged into an account and bought some coffee beans
+- has an example intake form in order to buy the coffee
+- utilizes the google maps api to show our store which is near the REI in Seattle
